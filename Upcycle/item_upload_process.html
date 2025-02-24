@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Item - Upcycle</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .upload-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f5f7fa;
+        }
+
+        .upload-box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 400px;
+        }
+
+        .upload-box h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .upload-box input, .upload-box select, .upload-box textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .upload-btn {
+            background: #16a085;
+            border: none;
+            padding: 12px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .upload-btn:hover {
+            background: #138a72;
+        }
+    </style>
+</head>
+<body>
+    <div class="upload-container">
+        <div class="upload-box">
+            <h2>Upload Your Item</h2>
+            <form>
+                <input type="text" placeholder="Item Name" required>
+                <textarea placeholder="Item Description" required></textarea>
+                <input type="file" accept="image/*" required>
+                <select required>
+                    <option value="">Select Category</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="furniture">Furniture</option>
+                    <option value="clothing">Clothing</option>
+                    <option value="other">Other</option>
+                </select>
+                <select required>
+                    <option value="">Select Condition</option>
+                    <option value="new">New</option>
+                    <option value="used">Used</option>
+                    <option value="needs-repair">Needs Repair</option>
+                </select>
+                <select required>
+                    <option value="">Selling or Giving Away?</option>
+                    <option value="sale">For Sale</option>
+                    <option value="free">Free</option>
+                </select>
+                <button class="upload-btn">Upload Item</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

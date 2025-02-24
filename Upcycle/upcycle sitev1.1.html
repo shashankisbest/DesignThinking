@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcycle - Buy and Sell</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 250px;
+            height: 100%;
+            background: #34495e;
+            padding: 20px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: 0.3s;
+        }
+        .sidebar a{
+            text-decoration: none;
+            color: white;
+        }
+
+        .sidebar.collapsed {
+            width: 50px;
+            overflow: hidden;
+        }
+
+        .sidebar h2, .sidebar a {
+            transition: 0.3s;
+        }
+
+        .sidebar.collapsed h2, .sidebar.collapsed a {
+            opacity: 0;
+        }
+
+        .toggle-btn {
+            position: absolute;
+            top: 20px;
+            left: 260px;
+            background: #f39c12;
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .sidebar.collapsed + .toggle-btn {
+            left: 60px;
+        }
+
+        .content {
+            margin-left: 270px;
+            padding: 20px;
+            transition: 0.3s;
+        }
+
+        .sidebar.collapsed ~ .content {
+            margin-left: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <h2>User Menu</h2>
+        <a href="login_page.html">Login / Sign Up</a>
+        <a href="#profile">Profile</a>
+        <a href="#settings">Settings</a>
+        <a href="#logout">Logout</a>
+    </div>
+    <button class="toggle-btn" id="toggleBtn">☰</button>
+    <div class="content">
+        <header>
+            <div class="marquee">
+                <marquee>Latest Giveaway Items Available! Claim Now!</marquee>
+            </div>
+            <nav>
+                <div class="logo">
+                    <img src="36-365062_upcycling-logo-hd-png-download.png" alt="Upcycle Logo" class="logo-img">
+                </div>
+                <div class="menu">
+                    <a href="#home">Home</a>
+                    <a href="#shop">Shop</a>
+                    <a href="item_upload_process.html">Sell</a>
+                    <a href="#giveaway">Giveaway</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
+        </header>
+        
+        <section class="hero">
+            <h1>Give New Life to Old Items</h1>
+            <p>Buy, Sell, and Donate Pre-Loved Items for a Sustainable Future</p>
+            <button class="explore-btn">Explore Now</button>
+        </section>
+        
+        <section class="features">
+            <button class="feature-btn buy-btn">Buy Quality Used Items</button>
+            <button class="feature-btn sell-btn">Sell What You Don't Need</button>
+            <button class="feature-btn giveaway-btn">Giveaway & Get Rewarded</button>
+        </section>
+        
+        <section class="giveaway" id="giveaway">
+            <h2>Available Giveaway Items</h2>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img src="item1.jpg" alt="Item 1">
+                </div>
+                <div class="grid-item">
+                    <img src="item2.webp" alt="Item 2">
+                </div>
+                <div class="grid-item">
+                    <img src="item3.webp" alt="Item 3">
+                </div>
+                <div class="grid-item">
+                    <img src="item4.webp" alt="Item 4">
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <p>&copy; 2025 Upcycle. All rights reserved.</p>
+        </footer>
+    </div>
+    <script>
+        document.getElementById("toggleBtn").addEventListener("click", function() {
+            document.getElementById("sidebar").classList.toggle("collapsed");
+        });
+    </script>
+</body>
+</html>
